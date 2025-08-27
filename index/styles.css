@@ -41,7 +41,7 @@ body,
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   height: 100%;
-  padding: 4px 0;
+  padding: 4px 0.5vw;
 }
 
 .left,
@@ -78,7 +78,7 @@ body,
 
 .workspaces {
   display: flex;
-  align-items: center;
+  align-items: left;
 }
 
 .workspace {
@@ -100,8 +100,7 @@ body,
 }
 
 .binding-mode,
-.tiling-direction,
-.paused-button {
+.tiling-direction {
   background: transparent;
   color: #000000;
   border-color: #000000;
@@ -112,6 +111,19 @@ body,
   cursor: pointer;
 }
 
+.paused-button {
+  background: transparent;
+  color: #000000;
+  outline: 2px solid #000000; /* black border */
+  border: none;
+  border-radius: 99px;
+  line-height: 1;
+  padding: 4px 8px;
+  font-family: "Segoe UI Variable", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  overflow: hidden;
+  font-weight: 700;
+}
 .binding-mode {
   margin-right: 4px;
 }

@@ -1,16 +1,16 @@
 {
   "$schema": "https://github.com/glzr-io/zebar/raw/v3.0.3/resources/zpack-schema.json",
   "name": "simplicity",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Sleek and simple zebar",
   "tags": [
     "transparent",
     "black and white"
   ],
   "previewImages": [
-    "resources\\preview-image-1.png"
+    "resources\\Preview.png"
   ],
-  "repositoryUrl": "",
+  "repositoryUrl": "https://github.com/ekewn/simplicity-zebar",
   "widgets": [
     {
       "name": "index",
