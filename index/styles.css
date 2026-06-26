@@ -5,9 +5,9 @@
 @import 'https://www.nerdfonts.com/assets/css/webfont.css';
 
 :root {
-  --text-color: #8E7070;
-  --text-color-light: #d4ccb4;
-  --background-color: #22262b;
+  --text-color: #8a6f3d;
+  /* --background-color: #191724; */
+  --background-color: --transparent;
 }
 i {
   color: var(--text-color);
@@ -16,7 +16,7 @@ i {
 }
 
 body {
-  font-family: "Segoe UI Variable", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "JetBrainsMono Nerd Font Mono";
   background: var(--background-color);
   font-size: 11px;
   overflow: hidden;
@@ -90,9 +90,9 @@ body,
   color: var(--text-color);
   background: var(--background);
   margin-right: 4px;
-  padding: 3px 6px;
+  padding: 1px 4px;
   border: none;
-  border-radius: 99px;
+  border-radius: 0px;
   cursor: pointer;
 
   &.displayed,
@@ -116,9 +116,6 @@ body,
 .binding-mode,
 .paused-button {
   background: var(--background);
-  color: var(--text-color);
-    outline: 2px solid var(--text-color);
-    /* black border */
   border: none;
   border-radius: 99px;
   line-height: 1;
