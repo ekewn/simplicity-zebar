@@ -159,12 +159,12 @@
 
               {output.battery && (
                 <div className="battery">
-                  {/* Show icon for whether battery is charging. */}
-                  {output.battery.isCharging && (
-                    "CHARGING "
-                  )}
                   {getBatteryIcon(output.battery)}
                   {Math.round(output.battery.chargePercent)}%
+                  {/* Show icon for whether battery is charging. */}
+                  {output.battery.isCharging && (
+                    " | ⚡"
+                  )}
                 </div>
               )}
 
