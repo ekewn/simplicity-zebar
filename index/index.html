@@ -49,9 +49,9 @@
         function getNetworkIcon(networkOutput) {
           switch (networkOutput.defaultInterface?.type) {
             case 'ethernet':
-              return "ETH ";
+              return " | VPN ON ";
             case 'wifi':
-                return "NET." + networkOutput.defaultGateway?.signalStrength + "% ";
+                return " | WIFI." + networkOutput.defaultGateway?.signalStrength + "% ";
             default:
               return "???";
           }
@@ -59,7 +59,7 @@
 
         // Get icon to show for how much of the battery is charged.
         function getBatteryIcon(batteryOutput) {
-          return "| BAT.";
+          return " BAT.";
         }
 
        // Get icon to show for current weather status.
@@ -131,15 +131,9 @@
 
             <div className="right">
 
-              {output.network && (
-                <div className="network">
-                  {getNetworkIcon(output.network)}
-                </div>
-              )}
-
               {output.memory && (
                 <div className="memory">
-                   | RAM.
+                   RAM.
                   {Math.round(output.memory.usage)}%
                 </div>
               )}
@@ -159,12 +153,19 @@
 
               {output.battery && (
                 <div className="battery">
+                  | 
+                  {output.battery.isCharging && (
+                    " ⚡"
+                  )}
                   {getBatteryIcon(output.battery)}
                   {Math.round(output.battery.chargePercent)}%
                   {/* Show icon for whether battery is charging. */}
-                  {output.battery.isCharging && (
-                    " | ⚡"
-                  )}
+                </div>
+              )}
+
+              {output.network && (
+                <div className="network">
+                  {getNetworkIcon(output.network)}
                 </div>
               )}
 
@@ -174,6 +175,7 @@
                   {Math.round(output.weather.fahrenheitTemp)}°
                 </div>
               )}
+
             </div>
           </div>
         );
